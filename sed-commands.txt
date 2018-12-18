@@ -1,7 +1,9 @@
 
 # Remove PATTERN from two consecutive lines concatenated.
 # N - read next line in pattern space
+# $p - if it's the last line, print the whole pattern space
+# $d - if it's the last line, delete the whole pattern space
 # s/PATTERN// - substitute pattern
 # P - print line from pattern space until '\n'
 # D - delete the line from pattern space until '\n'
-sed -n 'N ; s/PATTERN// ; P ; D'
+sed -n 'N ; $p; $d; s/,.*type = WorkProxyType.*// ; P ; D'
