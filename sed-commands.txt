@@ -1,0 +1,7 @@
+
+# Remove PATTERN from two consecutive lines concatenated.
+# N - read next line in pattern space
+# s/PATTERN// - substitute pattern
+# P - print line from pattern space until '\n'
+# D - delete the line from pattern space until '\n'
+sed -n 'N ; s/PATTERN// ; P ; D'
